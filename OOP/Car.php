@@ -4,7 +4,8 @@ namespace OOP\Car;
 
 include_once 'MovableInterface.php';
 
-
+const COUNTRY_AUDI = 'Germany';
+const COUNTRY_FORD = 'USA';
 abstract class Car implements MovableInterface
 {
     protected $speed;

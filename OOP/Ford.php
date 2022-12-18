@@ -3,18 +3,16 @@
 namespace OOP\Car;
 
 include_once 'Car.php';
-
-
-class Audi extends Car
+class Ford extends Car
 {
+
     public function __construct(string $colour)
     {
         parent::__construct($colour);
-        $this->maxSpeed = 300;
-        $this->braking = 50;
-        $this->power = 40;
+        $this->maxSpeed = 200;
+        $this->braking = 40;
+        $this->power = 30;
     }
-
     public function up(int $unit)
     {
         $messageOfPower = null;
@@ -25,13 +23,7 @@ class Audi extends Car
         if($this->maxSpeed <= $this->speed) {
             return $messageOfPower . 'Max speed!' . PHP_EOL;
         }
-        elseif ($this->speed >= 0) {
-            $this->speed += $unit;
-            return 'Now speed of the car is: ' . $this->speed . PHP_EOL;
-        }
-        else{
-            return 'Что-то пошло не так' . PHP_EOL;
-        }
+        //elseif ()
     }
     public function down(int $unit)
     {
